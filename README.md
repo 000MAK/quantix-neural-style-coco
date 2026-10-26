@@ -7,3 +7,6 @@ Optimize a generated image to match content and style feature statistics using p
 Use Python 3.10+ in a virtual environment; install `pip install -r requirements.txt`, then run `python main.py --help` (or see project-specific command below). Dataset files, model weights and outputs are kept locally and ignored by Git.
 
 Training code uses a fixed random seed/split and writes held-out metrics and model artifacts to `outputs/`.
+## Model weights
+
+Torchvision downloads pretrained VGG19 weights on first run. Supply your own `--content` and `--style` image paths; image files are not included.
