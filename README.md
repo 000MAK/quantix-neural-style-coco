@@ -1,12 +1,20 @@
-# Neural Style Transfer
+# Neural Style Transfer | VGG19
 
-Optimize a generated image to match content and style feature statistics using pretrained VGG19; initial run downloads weights from torchvision.
+Optimize a generated image to combine content features from one image with style features from another. A pretrained torchvision VGG19 feature stack supplies the perceptual representation; the optimized image is saved locally.
 
 ## Run
 
-Use Python 3.10+ in a virtual environment; install `pip install -r requirements.txt`, then run `python main.py --help` (or see project-specific command below). Dataset files, model weights and outputs are kept locally and ignored by Git.
+Install dependencies in a virtual environment, then pass two image paths:
 
-Training code uses a fixed random seed/split and writes held-out metrics and model artifacts to `outputs/`.
-## Model weights
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python main.py --content path\to\content.jpg --style path\to\style.jpg --steps 100
+```
 
-Torchvision downloads pretrained VGG19 weights on first run. Supply your own `--content` and `--style` image paths; image files are not included.
+`--steps` controls the optimization iterations. The VGG19 weights download on first use. The result is written to `outputs/stylized.png`; model weights and outputs are not committed.
+
+## Scope
+
+This is an optimization demo, not a trained model or a quantitative image-quality evaluation. Use images you have the right to process and share.
