@@ -18,3 +18,24 @@ python main.py --content path\to\content.jpg --style path\to\style.jpg --steps 1
 ## Scope
 
 This is an optimization demo, not a trained model or a quantitative image-quality evaluation. Use images you have the right to process and share.
+
+## Results
+
+No reference output is published yet. Style transfer has no single accuracy metric; publish the content/style images, iterations and loss weights with any example.
+
+## Repository contents
+
+| File | Purpose |
+|---|---|
+| `.gitignore` | Keeps data, weights and outputs out of Git |
+| `LICENSE` | MIT licence for the code |
+| `main.py` | Training and evaluation script |
+| `requirements.txt` | Python dependencies |
+
+## License
+
+Code is released under the MIT License (see `LICENSE`). Datasets keep their own licences and are downloaded at run time, not redistributed here.
+
+## Related
+
+Part of a set of compact, reproducible ML/DL baselines by [000MAK](https://github.com/000MAK). Flagship research project: [QMASE martial-arts analytics engine](https://github.com/000MAK/quantix-martial-arts-engine).
